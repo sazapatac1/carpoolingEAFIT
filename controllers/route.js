@@ -24,7 +24,7 @@ function showRoutes(req,res){
     Route.find({},(err,routes)=>{
         if(err) return res.status(500).send({message : `Error al realizar la petición: ${err}` })
         if(!routes) return res.status(404).send({message: `No existen rutas`})
-        res.send(200, {routes})
+        res.send(200, routes)
     })
 }
 
